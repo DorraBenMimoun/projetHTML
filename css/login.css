@@ -9,20 +9,20 @@
   padding: 0;
   text-align: center;
 
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-box-sizing: border-box;/* Utilisation de la boîte modèle border-box pour le rendu de la boîte */
+  box-sizing: border-box;/* Utilisation de la boîte modèle border-box pour le rendu de la boîte */
+  text-decoration: none;/* Pas de soulignement par défaut pour les liens */
+  outline: none; /* Pas de contour par défaut pour les éléments focusés */
+  border: none;/* Pas de bordure par défaut */
+  text-transform: capitalize;/* Transformation du texte en majuscule pour la première lettre de chaque mot */
+  -webkit-transition: all .2s linear;/* Transition pour toutes les propriétés en 0.2 seconde avec une transition linéaire */
+  transition: all .2s linear;/* Transition pour toutes les propriétés en 0.2 seconde avec une transition linéaire */
 }
 
 .cotn_principal {
-  position: absolute;
+  position: absolute; /* Position absolue par rapport à la fenêtre d'affichage */
   width: 100%;
-  display: flex;
+  display: flex;/* Affichage en tant que conteneur flexible */
   height: 100%;
 
   padding-right: 5%;
@@ -31,41 +31,42 @@
 }
 
 .cont_centrar {
-  display: flex;
-  align-self: center;
+  display: flex;/* Affichage en tant que conteneur flexible */
+  align-self: center;/* Alignement vertical au centre par rapport au conteneur parent */
   width: 100%;
 }
 
 .cont_login {
-  position: relative;
+  position: relative;/* Position relative par rapport à sa position normale */
   width: 640px;
   margin-left: 30%;
 }
 
 .cont_back_info {
-  position: relative;
-  float: left;
+  position: relative;/* Position relative par rapport à sa position normale */
+  float: left; /* Flottant à gauche */
   width: 640px;
   height: 280px;
-  overflow: hidden;
+  overflow: hidden; /* Flottant à gauche */
   background-color: #fff;
   box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 .cont_forms {
-  position: absolute;
-  overflow: hidden;
+  position: absolute;/* Position absolue par rapport à la fenêtre d'affichage */
+  overflow: hidden;/* Masquer tout contenu dépassant de la boîte */
   top: 0px;
   left: 0px;
   width: 320px;
   height: 280px;
   background-color: #eee;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.5s;/* Transition pour toutes les propriétés en 0.5 seconde avec le préfixe WebKit */
+  -moz-transition: all 0.5s;/* Transition pour toutes les propriétés en 0.5 seconde avec le préfixe Moz */
+  -ms-transition: all 0.5s; /* Transition pour toutes les propriétés en 0.5 seconde avec le préfixe MS */
+  -o-transition: all 0.5s;/* Transition pour toutes les propriétés en 0.5 seconde avec le préfixe Opera */
+  transition: all 0.5s;/* Transition pour toutes les propriétés en 0.5 seconde */
 }
+/* Style pour la classe "cont_forms_active_login" lorsque le formulaire de connexion est actif */
 
 .cont_forms_active_login {
   box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
@@ -78,6 +79,7 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+/* Style pour la classe "cont_forms_active_sign_up" lorsque le formulaire d'inscription est actif */
 
 .cont_forms_active_sign_up {
   box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
@@ -92,22 +94,23 @@
 }
 
 .cont_img_back_grey {
-  position: absolute;
+  position: absolute;/* Position absolue par rapport à la fenêtre d'affichage */
   width: 950px;
   top: -80px;
   left: -116px;
 }
+/* Style pour l'image dans la classe "cont_img_back_grey" */
 
 .cont_img_back_grey>img {
   width: 100%;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); /* Filtrage de l'image en niveaux de gris */
+  filter: grayscale(100%); /* Filtrage de l'image en niveaux de gris */
   opacity: 0.2;
   animation-name: animar_fondo;
   animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-timing-function: linear;/* Fonction de synchronisation linéaire */
+  animation-iteration-count: infinite;/* Nombre d'itérations infini pour l'animation */
+  animation-direction: alternate; /* Direction alternative de l'animation */
 }
 
 .cont_img_back_ {
@@ -233,10 +236,11 @@
   z-index: 2;
 }
 
+/* Définition de l'animation "animar_fondo" avec préfixes pour la compatibilité des navigateurs */
 
 @-webkit-keyframes animar_fondo {
   from {
-    -webkit-transform: scale(1) translate(0px);
+    -webkit-transform: scale(1) translate(0px);/* Transformation initiale sans mise à l'échelle ni translation */
     -moz-transform: scale(1) translate(0px);
     -ms-transform: scale(1) translate(0px);
     -o-transform: scale(1) translate(0px);
@@ -244,13 +248,14 @@
   }
 
   to {
-    -webkit-transform: scale(1.5) translate(50px);
+    -webkit-transform: scale(1.5) translate(50px);/* Transformation finale avec mise à l'échelle et translation */
     -moz-transform: scale(1.5) translate(50px);
     -ms-transform: scale(1.5) translate(50px);
     -o-transform: scale(1.5) translate(50px);
     transform: scale(1.5) translate(50px);
   }
 }
+/* Définition de l'animation "identifier" avec préfixe pour Opera */
 
 @-o-keyframes identifier {
   from {
@@ -269,6 +274,7 @@
     transform: scale(1.5);
   }
 }
+/* Définition de l'animation "identifier" avec préfixe pour Firefox */
 
 @-moz-keyframes identifier {
   from {
@@ -287,6 +293,7 @@
     transform: scale(1.5);
   }
 }
+/* Définition de l'animation "identifier" sans préfixe pour les navigateurs modernes */
 
 @keyframes identifier {
   from {
@@ -335,7 +342,7 @@
   transition: all 0.5s;
 }
 
-.cont_form_sign_up>input {
+.cont_form_sign_up>form>input {
   text-align: left;
   padding: 15px 5px;
   margin-left: 10px;
@@ -351,7 +358,7 @@
   color: #757575;
 }
 
-.cont_form_login>input {
+.cont_form_login>form>input {
   padding: 15px 5px;
   margin-left: 10px;
   margin-top: 20px;

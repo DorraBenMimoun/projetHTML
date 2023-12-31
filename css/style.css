@@ -8,6 +8,7 @@
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
+  text-align: center;
   border: none;
   text-transform: capitalize; /* Met en majuscule la première lettre de chaque mot */
   -webkit-transition: all .2s linear;/* Applique une transition fluide de 0.2 seconde pour toutes les propriétés */
