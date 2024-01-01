@@ -359,57 +359,133 @@ section {
 }
 
 
-
+/* Styles pour le conteneur dans le menu */
 .menu .box-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-  gap: 2rem;
+  display: -ms-grid; /* Utilisation de la syntaxe spécifique à Microsoft pour le support des navigateur */
+  display: grid; /* Utilisation de la syntaxe standard pour la disposition en grille */
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit]; /* Définition des colonnes de la grille pour navigateur*/
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr)); /* Définition des colonnes de la grille pour les navigateurs modernes avec auto-fit */
+  gap: 2rem; /* Espacement entre les éléments de la grille */
 }
 
+/* Styles pour chaque boîte à l'intérieur du conteneur */
 .menu .box-container .box {
-  text-align: center;
+  text-align: center; /* Centrer le texte */
 }
 
+/* Styles pour l'effet de survol sur l'image de container */
 .menu .box-container .box:hover img {
-  -webkit-transform: translateY(1rem);
-          transform: translateY(1rem);
+  -webkit-transform: translateY(1rem); /* Effet de translation vers le bas au survol pour les navigateurs basés sur WebKit (comme Chrome et Safari) */
+  transform: translateY(1rem); /* Effet de translation vers le bas au survol pour les navigateurs standards */
 }
 
+/* Styles pour les images dans container */
 .menu .box-container .box img {
-  height: 25rem;
+  height: 25rem; /* Hauteur fixe pour les images dans les boîtes */
 }
 
+/* Styles pour le contenu à l'intérieur de chaque container */
 .menu .box-container .box .content {
-  padding: 1rem 0;
+  padding: 1rem 0; /* Rembourrage supérieur et inférieur pour le contenu dans la boîte */
 }
 
+/* Styles pour la section de notation en étoiles  */
 .menu .box-container .box .content .stars {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Marge inférieure pour l'espace entre la section d'étoiles et le reste du contenu */
 }
 
 .menu .box-container .box .content .stars i {
-  font-size: 1.7rem;
-  color: #eacf4f;
+  font-size: 1.7rem; /* Taille de police pour les icônes d'étoiles */
+  color: #eacf4f; 
 }
 
+/* Styles pour le titre  */
 .menu .box-container .box .content h3 {
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-size: 2rem; /* Taille de police */
+  text-transform: uppercase; /* Conversion du texte en majuscules */
   color: #fff;
 }
 
+/* Styles pour les informations de prix */
 .menu .box-container .box .content .price {
-  font-size: 2rem;
-  line-height: 2;
-  color: #aaa;
+  font-size: 2rem; /* Taille de police  */
+  line-height: 2; /* Hauteur de ligne pour espacer le texte */
+  color: #aaa; 
 }
 
+/* Styles pour la section "About" */
+.about {
+  display: -webkit-box; /* Utilisation de la syntaxe spécifique à WebKit (moteur de rendu de page web */
+  display: -ms-flexbox; /* Utilisation de la syntaxe spécifique pour  navigateur */
+  display: flex; /* Utilisation de la syntaxe standard pour la disposition de conteneur */
+  -webkit-box-align: center; /* Centrer verticalement les éléments enfants dans le conteneur */
+      -ms-flex-align: center; /* Centrer verticalement les éléments enfants dans le conteneur pour  navigateur  */
+          align-items: center; /* Centrer verticalement les éléments enfants dans le conteneur */
+  -ms-flex-wrap: wrap; /* Permettre le retour à la ligne des éléments enfants lorsque l'espace est insuffisant pour  navigateur  */
+      flex-wrap: wrap; /* Permettre le retour à la ligne des éléments enfants lorsque l'espace est insuffisant */
+  gap: 3rem; /* Espacement entre les éléments enfants */
+}
 
+/* Styles pour la partie "image"  */
+.about .image {
+  -webkit-box-flex: 1; /* Permettre à la partie "image" de croître en fonction de l'espace disponible */
+      -ms-flex: 1 1 40rem; /* Définir la taille de la partie "image" pour navigateur*/
+          flex: 1 1 40rem; /* Définir la taille de la partie "image" */
+}
 
+.about .image img {
+  width: 100%; /* Faire en sorte que l'image occupe 100% de la largeur de son conteneur */
+}
 
+/* Styles pour la partie "content"  */
+.about .content {
+  -webkit-box-flex: 1; /* Permettre à la partie "content" de croître en fonction de l'espace disponible */
+      -ms-flex: 1 1 40rem; /* Définir la taille de la partie "content" pour navigateur */
+          flex: 1 1 40rem; /* Définir la taille de la partie "content" */
+}
 
+/* Styles pour le titre dans la partie "content" */
+.about .content .title {
+  font-size: 2.5rem; /* Taille de police pour le titre */
+  text-transform: uppercase; /* Convertir le texte en majuscules */
+  color: #fff; 
+}
+
+/* Styles pour le paragraphe dans la partie "content" */
+.about .content p {
+  font-size: 1.5rem; /* Taille de police pour le paragraphe */
+  line-height: 2; /* Hauteur de ligne pour espacer le texte */
+  color: #aaa; 
+  padding: 2rem 0; /* Rembourrage supérieur et inférieur pour le paragraphe */
+}
+
+/* Styles pour la section des icônes dans la partie "content" */
+.about .content .icons {
+  display: -webkit-box; /* Utilisation de la syntaxe spécifique à WebKit pour la disposition en boîte des icônes */
+  display: -ms-flexbox; /* Utilisation de la syntaxe spécifique navigateur pour la disposition en boîte des icônes */
+  display: flex; /* Utilisation de la syntaxe standard pour la disposition en boîte des icônes */
+  -ms-flex-wrap: wrap; /* Permettre le retour à la ligne des icônes lorsque l'espace est insuffisant pour navigateur */
+      flex-wrap: wrap; /* Permettre le retour à la ligne des icônes lorsque l'espace est insuffisant */
+  gap: 1.5rem; /* Espacement entre les icônes */
+  margin-bottom: 2rem; /* Marge inférieure pour l'espace entre la section d'icônes et le reste du contenu */
+  margin-top: 1rem; /* Marge supérieure pour l'espace au-dessus de la section d'icônes */
+}
+
+/* Styles pour chaque icône dans la section des icônes */
+.about .content .icons h3 {
+  -webkit-box-flex: 1; /* Permettre à chaque icône de croître en fonction de l'espace disponible */
+      -ms-flex: 1 1 16rem; /* Définir la taille de chaque icône pour navigateur */
+          flex: 1 1 16rem; /* Définir la taille de chaque icône */
+  font-size: 1.5rem; /* Taille de police pour chaque icône */
+  text-transform: uppercase; /* Convertir le texte en majuscules */
+  color: #fff;
+}
+
+/* Styles pour l'icône à l'intérieur de chaque icône de la section des icônes */
+.about .content .icons h3 i {
+  padding-right: .5rem; /* Espacement à droite de l'icône pour séparation visuelle */
+  color: #eacf4f; 
+}
 
 
 
