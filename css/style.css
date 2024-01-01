@@ -1,54 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap");
+/* Réinitialisation des styles de base */
 * {
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   outline: none;
+  text-align: center;
   border: none;
-  text-transform: capitalize;
-  -webkit-transition: all .2s linear;
+  text-transform: capitalize; /* Met en majuscule la première lettre de chaque mot */
+  -webkit-transition: all .2s linear;/* Applique une transition fluide de 0.2 seconde pour toutes les propriétés */
   transition: all .2s linear;
 }
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
-  overflow-x: hidden;
+  scroll-behavior: smooth;/* Active le défilement fluide */
+  scroll-padding-top: 8rem;/* Ajoute un espace de défilement fluide en haut du document */
+  overflow-x: hidden;/* Masque la barre de défilement horizontale */
 }
-
+/* Styles de la barre de défilement pour les navigateurs WebKit (Chrome, Safari) */
 html::-webkit-scrollbar {
-  width: 1rem;
+  width: 1rem;/* Fixe la largeur de la barre de défilement */
 }
 
 html::-webkit-scrollbar-track {
-  background: #000;
+  background: #000;/* Couleur de fond de la piste de la barre de défilement */
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #eacf4f;
-  border-radius: 5rem;
+  background: #eacf4f;/* Couleur du curseur de la barre de défilement */
+  border-radius: 5rem;/* Ajoute un léger arrondi aux coins du curseur */
 }
 
 body {
   background: url(../images/background.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  overflow-x: hidden;
+  background-attachment: fixed;/* Fixe l'image de fond lors du défilement */
+  background-position: center;/* Centre l'image de fond */
+  overflow-x: hidden; /* Masque la barre de défilement horizontale */
+
 }
 
 section {
-  padding: 3rem 9%;
+  padding: 3rem 9%;/* Ajoute un rembourrage de 3 rem en haut et en bas, et 9% sur les côtés */
 }
-
+/* Styles pour les titres centrés */
 .heading {
   text-align: center;
   margin-bottom: 3rem;
 }
-
+/* Styles pour les titres de niveau 3 */
 .heading h3 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -62,50 +65,50 @@ section {
   cursor: pointer;
   color: #fff;
   border: 0.2rem solid rgba(255, 255, 255, 0.3);
-  background: no-repeat;
+  background: no-repeat;/* Aucune répétition de l'arrière-plan */
   font-size: 1.7rem;
-  padding: 1rem 3rem;
+  padding: 1rem 3rem;/* Rembourrage de 1 rem en haut/bas et 3 rem à gauche/droite */
 }
 
 .btn:hover {
   color: #000;
   background: #fff;
 }
-
+/* Styles pour l'en-tête (barre de navigation) */
 .header {
-  position: fixed;
+  position: fixed;/* Position fixe pour rester en haut de la page même en défilant */
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1000; /* Couche la plus élevée pour être au-dessus des autres éléments */
   background: #000;
   padding: 3rem 9%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;/* Utilisation de la disposition de la boîte flexible pour les anciennes versions de WebKit */
+  display: -ms-flexbox;/* Utilisation de la disposition de la boîte flexible pour les anciennes versions de MS */
+  display: flex;/* Utilisation de la disposition de la boîte flexible pour les anciennes versions de MS */
+  -webkit-box-align: center;/* Alignement vertical au centre */
+  -ms-flex-align: center;/* Alignement vertical au centre */
+  align-items: center;/* Alignement vertical au centre */
+  -webkit-box-pack: justify;/* Répartit l'espace entre les éléments avec justification */
+  -ms-flex-pack: justify;/* Répartit l'espace entre les éléments avec justification */
+  justify-content: space-between;/* Répartit l'espace entre les éléments avec justification */
   gap: 1rem;
 }
 
 .header .icons {
   font-size: 2.5rem;
-  cursor: pointer;
+  cursor: pointer;/* Curseur pointeur au survol */
   color: #fff;
 }
 
 .header .icons:hover {
   color: #eacf4f;
 }
-
+/* Styles spécifiques pour le bouton de menu dans l'en-tête */
 .header #menu-btn {
-  display: none;
+  display: none; /* Masque le bouton de menu par défaut */
 }
-
+/* Styles pour les liens de la barre de navigation */
 .header .navbar a {
   color: #fff;
   font-size: 2rem;
@@ -113,22 +116,22 @@ section {
 }
 
 .header .navbar a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Souligne le texte au survol */
   text-underline-offset: 1rem;
   color: #eacf4f;
 }
-
+/* Styles pour l'espace dans la barre de navigation */
 .header .navbar .space {
-  display: inline-block;
+  display: inline-block;/* Affiche en tant que bloc en ligne */
   width: 16rem;
 }
-
+/* Styles pour le formulaire de recherche dans l'en-tête */
 .header .logo {
-  position: absolute;
+  position: absolute;/* Position absolue par rapport à l'élément parent */
   top: 3rem;
-  left: 48.5%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 48.5%;/* Centre horizontalement à 48.5% */
+  -webkit-transform: translateX(-50%);/* Déplace de 50% vers la gauche pour centrer */
+  transform: translateX(-50%);/* Déplace de 50% vers la gauche pour centrer */
 }
 
 .header .logo img {
@@ -138,83 +141,83 @@ section {
 .header .search-form {
   height: 7rem;
   padding: 0 2rem;
-  border-top: 0.2rem solid rgba(255, 255, 255, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border-top: 0.2rem solid rgba(255, 255, 255, 0.3);/* Bordure supérieure de 0.2 rem en blanc avec une légère transparence */
+  display: -webkit-box;/* Utilisation de la disposition de la boîte flexible pour les anciennes versions de WebKit */
+  display: -ms-flexbox; /* Utilisation de la disposition de la boîte flexible pour les anciennes versions de MS */
+  display: flex; /* Utilisation de la disposition de la boîte flexible */
+  -webkit-box-align: center;/* Alignement vertical au centre */
+  -ms-flex-align: center;/* Alignement vertical au centre */
+  align-items: center;/* Alignement vertical au centre */
   background: #000;
-  position: absolute;
-  top: 99%;
+  position: absolute;/* Position absolue par rapport à l'élément parent */
+  top: 99%;/* Distance de 99% depuis le haut */
   left: 0;
   right: 0;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);/* Forme rectangulaire du formulaire de recherche */
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);/* Forme rectangulaire du formulaire de recherche */
 }
-
+/* Styles pour la forme du formulaire de recherche lorsqu'il est actif */
 .header .search-form.active {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);/* Forme rectangulaire avec coins supérieurs arrondis du formulaire de recherche actif */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);/* Forme rectangulaire avec coins supérieurs arrondis du formulaire de recherche actif */
 }
-
+/* Styles pour la zone de texte du formulaire de recherche */
 .header .search-form input {
-  width: 100%;
-  background: none;
-  text-transform: none;
+  width: 100%;/* Largeur de 100% pour occuper tout l'espace disponible */
+  background: none;/* Fond transparent */
+  text-transform: none; /* Pas de transformation de texte (majuscules/minuscules) */
   font-size: 1.6rem;
   color: #fff;
 }
-
+/* Styles pour l'icône de fermeture du formulaire de recherche */
 .header .fa-times {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);/* Rotation de l'icône de 180 degrés pour afficher une croix à la place d'une flèche */
+  transform: rotate(180deg);/* Rotation de l'icône de 180 degrés pour afficher une croix à la place d'une flèche */
 }
-
+/* Style pour la section "home" */
 .home {
-  margin-top: 7rem;
+  margin-top: 7rem; /* Marge supérieure de 7 rem pour la section "home" */
   background: url(../images/home-bg.png) no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: cover;/* Redimensionnement de l'image pour couvrir tout l'espace */
+  background-position: center;/* Positionnement de l'image au centre */
 }
-
+/* Style pour le contenu de la section "home" */
 .home .content {
-  max-width: 70rem;
-  text-align: center;
-  margin: 0 auto;
+  max-width: 70rem;/* Largeur maximale de 70 rem pour le contenu de la section "home" */
+  text-align: center;/* Alignement du texte au centre */
+  margin: 0 auto; /* Centre le contenu horizontalement */
 }
-
+/* Style pour les images dans la section "home" */
 .home .content img {
   width: 100%;
 }
-
+/* Style pour les titres h3 dans la section "home" */
 .home .content h3 {
   font-size: 4rem;
   text-transform: uppercase;
   color: #fff;
 }
-
+/* Style pour les paragraphes dans la section "home" */
 .home .content p {
   font-size: 1.7rem;
   line-height: 2;
   color: #aaa;
   padding: 2rem 0;
 }
-
+/* Style pour la classe "service" */
 .service {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-  gap: 2rem;
+  display: -ms-grid; /* Utilisation de la disposition de grille pour Internet Explorer */
+  display: grid;/* Utilisation de la disposition de grille */
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];/* Colonnes de grille avec une largeur minimale de 31 rem */
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr)); /* Colonnes de grille répétées avec une largeur minimale de 31 rem */
+  gap: 2rem; /* Espacement de 2 rem entre les éléments de la grille */
 }
-
+/* Style pour la classe "box" dans la section "service" */
 .service .box {
   text-align: center;
   padding: 2rem;
 }
-
+/* Style pour les icônes dans la classe "box" */
 .service .box i {
   height: 7rem;
   width: 7rem;
@@ -225,18 +228,134 @@ section {
   margin-bottom: 1rem;
   border-radius: 50%;
 }
-
+/* Style pour les titres h3 dans la classe "box" */
 .service .box h3 {
   padding: 1rem 0;
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
 }
-
+/* Style pour les paragraphes dans la classe "box" */
 .service .box p {
   font-size: 1.5rem;
   line-height: 2;
   color: #aaa;
+}
+/* Style pour la classe "login" */
+.login {
+  display: -webkit-box;/* Affichage en tant que boîte flexible pour WebKit (ancienne syntaxe) */
+  display: -ms-flexbox;/* Affichage en tant que boîte flexible pour Internet Explorer */
+  display: flex;/* Affichage en tant que boîte flexible */
+  -ms-flex-wrap: wrap;/* Permettre le retour à la ligne des éléments fils pour Internet Explorer */
+  flex-wrap: wrap;/* Permettre le retour à la ligne des éléments fils */
+  gap: 3rem; /* Espacement de 3 rem entre les éléments fils */
+}
+/* Style pour la classe "map" dans la classe "login" */
+.login .map {
+  -webkit-box-flex: 1;/* Propriété flexible pour WebKit (ancienne syntaxe) */
+  -ms-flex: 1 1 40rem; /* Propriété flexible pour Internet Explorer */
+  flex: 1 1 40rem;/* Propriété flexible */
+  width: 100%;
+}
+/* Style pour la classe "form" dans la classe "login" */
+
+.login .form {
+  margin-top: 10%;
+  -webkit-box-flex: 1;/* Propriété flexible pour WebKit (ancienne syntaxe) */
+  -ms-flex: 1 1 40rem; /* Propriété flexible pour Internet Explorer */
+  flex: 1 1 40rem;/* Propriété flexible */
+}
+/* Style pour le conteneur d'icônes dans la classe "icons-container" de la classe "form" */
+.login .form .icons-container {
+  display: -webkit-box;/* Affichage en tant que boîte flexible pour WebKit (ancienne syntaxe) */
+  display: -ms-flexbox; /* Affichage en tant que boîte flexible pour Internet Explorer */
+  display: flex;/* Affichage en tant que boîte flexible */
+  -ms-flex-wrap: wrap;/* Permettre le retour à la ligne des éléments fils pour Internet Explorer */
+  flex-wrap: wrap; /* Permettre le retour à la ligne des éléments fils */
+  gap: 2rem; /* Espacement de 2 rem entre les éléments fils */
+  margin-bottom: 3rem;
+}
+/* Style pour les icônes dans la classe "icons" de la classe "icons-container" de la classe "form" */
+.login .form .icons-container .icons {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 17rem;
+  flex: 1 1 17rem;
+  text-align: center;
+}
+/* Style pour les icônes dans la classe "icons" de la classe "icons-container" de la classe "form" */
+
+.login .form .icons-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  background: #eacf4f;
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+/* Style pour les titres h3 dans la classe "icons" de la classe "icons-container" de la classe "form" */
+
+.login .form .icons-container .icons h3 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* Style pour les paragraphes dans la classe "icons" de la classe "icons-container" de la classe "form" */
+
+.login .form .icons-container .icons p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #aaa;
+}
+/* Style pour le formulaire dans la classe "form" de la classe "login" */
+
+.login .form form {
+  text-align: center;
+}
+/* Style pour la boîte dans le formulaire de la classe "form" de la classe "login" */
+
+.login .form form .box {
+  padding: 1.2rem 1.4rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: none;
+  border: 0.2rem solid rgba(255, 255, 255, 0.3);
+  text-transform: none;
+  width: 100%;
+  margin: .7rem 0;
+}
+
+.login .form form .box:focus {
+  border-color: #eacf4f;
+}
+
+.login .form form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.footer {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));/* Dégradé linéaire pour WebKit (ancienne syntaxe) */
+  background: linear-gradient(transparent, #000);/* Dégradé linéaire */
+}
+
+.footer .links a {
+  margin: 1rem;
+}
+/* Style pour la classe "credit" de la classe "footer" */
+
+.footer .credit {
+  font-size: 2rem;
+  line-height: 2;
+  color: #aaa;
+  padding-top: 2rem;
+}
+
+.footer .credit span {
+  color: #eacf4f;
 }
 
 
@@ -296,64 +415,76 @@ section {
 
 
 
+/* Media query pour les écrans ayant une largeur maximale de 1200 pixels */
 @media (max-width: 1200px) {
   .header {
     padding: 3rem;
   }
+
   section {
     padding: 3rem 2rem;
   }
 }
-
+/* Media query pour les écrans ayant une largeur maximale de 991 pixels */
 @media (max-width: 991px) {
   html {
-    font-size: 55%;
+    font-size: 55%;/* Réduction de la taille de police de base à 55% */
   }
+
   .header {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    gap: 2rem;
+    -webkit-box-pack: end;/* Alignement des éléments à la fin dans la disposition de la boîte flexible pour les anciennes versions de WebKit */
+    -ms-flex-pack: end;/* Alignement des éléments à la fin dans la disposition de la boîte flexible pour les anciennes versions de WebKit */
+    justify-content: flex-end;/* Alignement des éléments à la fin dans la disposition de la boîte flexible pour les anciennes versions de WebKit */
+    gap: 2rem;/* Ajout d'un espace de 2 rem entre les éléments de l'en-tête */
   }
+
   .header .logo {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    left: 3rem;
+    -webkit-transform: translateX(0); /* Annulation de la translation horizontale de l'image du logo */
+    transform: translateX(0); /* Annulation de la translation horizontale de l'image du logo */
+    left: 3rem;/* Ajout de 3 rem de décalage à gauche pour le logo */
   }
+
   .header #menu-btn {
-    display: inline-block;
+    display: inline-block;/* Affichage du bouton de menu en ligne */
   }
+
   .header .navbar {
-    position: absolute;
+    position: absolute;/* Positionnement absolu pour la barre de navigation */
     top: 99%;
     left: 0;
     right: 0;
     background: #000;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);/* Forme rectangulaire pour la barre de navigation */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);/* Forme rectangulaire pour la barre de navigation */
   }
+
   .header .navbar.active {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);/* Forme rectangulaire avec coins supérieurs arrondis pour la barre de navigation active */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);/* Forme rectangulaire avec coins supérieurs arrondis pour la barre de navigation active */
   }
+
   .header .navbar a {
-    display: block;
-    margin: 3rem 2rem;
+    display: block;/* Affichage des liens de navigation en bloc (un en dessous de l'autre) */
+    margin: 3rem 2rem;/* Ajout de marges de 3 rem en haut/bas et 2 rem à gauche/droite pour les liens de navigation */
   }
+
   .header .navbar .space {
-    display: none;
+    display: none;/* Masquage de l'espace dans la barre de navigation */
   }
 }
+/* Media query pour les écrans ayant une largeur maximale de 768 pixels */
 
 @media (max-width: 768px) {
   .home .content h3 {
     font-size: 2.5rem;
   }
 }
+/* Media query pour les écrans ayant une largeur maximale de 450 pixels */
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
