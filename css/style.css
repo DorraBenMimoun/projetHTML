@@ -10,8 +10,8 @@
   outline: none;
   text-align: center;
   border: none;
-  text-transform: capitalize; /* Met en majuscule la première lettre de chaque mot */
-  -webkit-transition: all .2s linear;/* Applique une transition fluide de 0.2 seconde pour toutes les propriétés */
+  text-transform: capitalize; 
+  -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 
@@ -23,7 +23,7 @@ html {
 }
 /* Styles de la barre de défilement pour les navigateurs WebKit (Chrome, Safari) */
 html::-webkit-scrollbar {
-  width: 1rem;/* Fixe la largeur de la barre de défilement */
+  width: 1rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -37,10 +37,9 @@ html::-webkit-scrollbar-thumb {
 
 body {
   background: url(../images/background.jpg);
-  background-attachment: fixed;/* Fixe l'image de fond lors du défilement */
-  background-position: center;/* Centre l'image de fond */
-  overflow-x: hidden; /* Masque la barre de défilement horizontale */
-
+  background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 section {
@@ -406,6 +405,9 @@ section {
   color: #fff;
 }
 
+.box-container {
+  color: white!important;
+}
 /* Styles pour les informations de prix */
 .menu .box-container .box .content .price {
   font-size: 2rem; /* Taille de police  */
@@ -504,35 +506,34 @@ section {
 
 /* Styles pour les images dans chaque container */
 .reviews .box-container .box img {
-  height: 10rem; /* Hauteur fixe  */
-  width: 10rem; /* Largeur fixe  */
-  border-radius: 50%; /* Bordure arrondie pour un aspect circulaire */
-  margin-bottom: 1rem; /* Marge inférieure pour séparation visuelle */
+  height: 10rem; 
+  width: 10rem; 
+  border-radius: 50%; 
+  margin-bottom: 1rem; 
 }
 
 /* Styles pour le titre */
 .reviews .box-container .box h3 {
-  font-size: 2rem; /* Taille de police pour le titre */
-  text-transform: uppercase; /* Conversion du texte en majuscules */
+  font-size: 2rem; 
+  text-transform: uppercase; 
   color: #fff; 
 }
 
 /* Styles pour le paragraphe */
 .reviews .box-container .box p {
-  font-size: 1.4rem; /* Taille de police pour le paragraphe */
-  line-height: 2; /* Hauteur de ligne pour espacer le texte */
-  color: #aaa; 
-  padding: 1rem 0; /* Espacement interne pour le paragraphe */
+  font-size: 1.4rem; 
+  line-height: 2;
+  padding: 1rem 0; 
 }
 
 /* Styles pour la section d'étoiles  */
 .reviews .box-container .box .stars {
-  padding-top: .5rem; /* Espacement supérieur  */
+  padding-top: .5rem;
 }
 
 /* Styles pour chaque icône d'étoile  */
 .reviews .box-container .box .stars i {
-  font-size: 1.7rem; /* Taille de police */
+  font-size: 1.7rem; 
   color: #eacf4f; 
 }
 
@@ -552,7 +553,7 @@ section {
 /* Media query pour les écrans ayant une largeur maximale de 991 pixels */
 @media (max-width: 991px) {
   html {
-    font-size: 55%;/* Réduction de la taille de police de base à 55% */
+    font-size: 55%;
   }
 
   .header {
@@ -610,5 +611,3 @@ section {
     font-size: 50%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
