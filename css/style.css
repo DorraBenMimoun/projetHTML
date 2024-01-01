@@ -487,6 +487,54 @@ section {
   color: #eacf4f; 
 }
 
+/* Styles pour le container contenant les avis clients */
+.reviews .box-container {
+  display: -ms-grid; /* Utilisation de la syntaxe spécifique navigateur pour la disposition en grille */
+  display: grid; /* Utilisation de la syntaxe standard pour la disposition en grille */
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit]; /* Définition des colonnes de la grille pour navigateur */
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr)); /* Définition des colonnes de la grille pour les navigateurs modernes avec auto-fit */
+  gap: 2rem; /* Espacement entre les éléments de la grille */
+}
+
+/* Styles pour chaque container */
+.reviews .box-container .box {
+  text-align: center; /* Centrer le texte à l'intérieur de la boîte */
+  padding: 2rem; /* Espacement interne de la boîte */
+}
+
+/* Styles pour les images dans chaque container */
+.reviews .box-container .box img {
+  height: 10rem; /* Hauteur fixe  */
+  width: 10rem; /* Largeur fixe  */
+  border-radius: 50%; /* Bordure arrondie pour un aspect circulaire */
+  margin-bottom: 1rem; /* Marge inférieure pour séparation visuelle */
+}
+
+/* Styles pour le titre */
+.reviews .box-container .box h3 {
+  font-size: 2rem; /* Taille de police pour le titre */
+  text-transform: uppercase; /* Conversion du texte en majuscules */
+  color: #fff; 
+}
+
+/* Styles pour le paragraphe */
+.reviews .box-container .box p {
+  font-size: 1.4rem; /* Taille de police pour le paragraphe */
+  line-height: 2; /* Hauteur de ligne pour espacer le texte */
+  color: #aaa; 
+  padding: 1rem 0; /* Espacement interne pour le paragraphe */
+}
+
+/* Styles pour la section d'étoiles  */
+.reviews .box-container .box .stars {
+  padding-top: .5rem; /* Espacement supérieur  */
+}
+
+/* Styles pour chaque icône d'étoile  */
+.reviews .box-container .box .stars i {
+  font-size: 1.7rem; /* Taille de police */
+  color: #eacf4f; 
+}
 
 
 
