@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger4YOU</title>
+
+    <!-- Font Awesome CDN link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- Custom CSS file links -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div id="menu-btn" class="fas fa-bars icons"></div>
+      <div id="search-btn" class="fas fa-search icons"></div>
+
+      <nav class="navbar">
+        <a href="./index.html#home">home</a>
+        <a href="./index.html#menu">menu</a>
+        <a href="./index.html#about">about</a>
+        <span class="space"></span>
+        <a href="./index.html#reviews">reviews</a>
+        <a href="./index.html#contact">contact</a>
+        <a href="./index.html#blogs">blogs</a>
+      </nav>
+
+      <div>
+        <a
+          href="./index.html#"
+          class="fas fa-shopping-cart icons"
+          style="margin-right: 10px"
+        ></a>
+        <a href="./login.html" class="fas fa-user icons"></a>
+      </div>
+      <a href="./index.html#home" class="logo"
+        ><img src="images/logo.png" alt=""
+      /></a>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search icons"></label>
+      </form>
+    </header>
+
+    <section class="login" id="login">
+      <div class="container_main">
+        <div class="container_center">
+          <div class="container_login">
+            <div class="container_info_log_sign_up">
+              <div class="col_md_login">
+                <div class="container_ba_opacity">
+                  <h2>LOGIN</h2>
+                  <p>
+                    Welcome to our place! Log in to order your delicious
+                    burgers.
+                  </p>
+                  <button class="btn_login" onclick="change_to_login()">
+                    LOGIN
+                  </button>
+                </div>
+              </div>
+
+              <div class="col_md_sign_up">
+                <div class="container_ba_opacity">
+                  <h2>SIGN UP</h2>
+                  <p>
+                    Join us and discover a unique taste experience! Sign up to
+                    place your first order.
+                  </p>
+                  <button class="btn_sign_up" onclick="change_to_sign_up()">
+                    SIGN UP
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="container_back_info">
+              <div class="container_img_back_grey">
+                <img
+                  src="https://as1.ftcdn.net/v2/jpg/01/85/12/82/1000_F_185128294_ajLJQUTN1fuEXE1rTjZeOFY2eUcaiI18.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="container_forms">
+              <div class="container_img_back_">
+                <img
+                  src="https://as1.ftcdn.net/v2/jpg/01/85/12/82/1000_F_185128294_ajLJQUTN1fuEXE1rTjZeOFY2eUcaiI18.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container_form_login">
+                <a href="#" onclick="hidden_login_and_sign_up()">
+                  <img src="https://png.pngtree.com/png-vector/20220628/ourmid/pngtree-icon-close-button-incorrect-forbidden-png-image_5286028.png" class=" close-btn"></i>
+                </a>
+                <h2>LOGIN </h2>
+                <form>
+                  <input type="text" placeholder="Email" />
+                  <input type="password" placeholder="Password" />
+                  <button class="btn_login" onclick="change_to_login()">
+                    LOGIN
+                  </button>
+                </form>
+              </div>
+              <div class="container_form_sign_up">
+                <a href="#" onclick="hidden_login_and_sign_up()"
+                  >
+                  <img src="https://png.pngtree.com/png-vector/20220628/ourmid/pngtree-icon-close-button-incorrect-forbidden-png-image_5286028.png" class=" close-btn"></i>
+
+                  </a
+                >
+                <h2>SIGN UP</h2>
+                <form>
+                  <input type="text" placeholder="Email" />
+                  <input type="text" placeholder="User" />
+                  <input type="password" placeholder="Password" />
+                  <input type="password" placeholder="Confirm Password" />
+                  <button class="btn_sign_up" onclick="change_to_sign_up()">
+                    SIGN UP
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+      });
+      const time_to_show_login = 400;
+      const time_to_hidden_login = 200;
+      function change_to_login() {
+        document.querySelector(".container_forms").className =
+          "container_forms container_forms_active_login";
+        document.querySelector(".container_form_login").style.display = "block";
+        document.querySelector(".container_form_sign_up").style.opacity = "0";
+        setTimeout(function () {
+          document.querySelector(".container_form_login").style.opacity = "1";
+        }, time_to_show_login);
+        setTimeout(function () {
+          document.querySelector(".container_form_sign_up").style.display =
+            "none";
+        }, time_to_hidden_login);
+      }
+
+      const time_to_show_sign_up = 100;
+      const time_to_hidden_sign_up = 400;
+
+      function change_to_sign_up(at) {
+        document.querySelector(".container_forms").className =
+          "container_forms container_forms_active_sign_up";
+        document.querySelector(".container_form_sign_up").style.display =
+          "block";
+        document.querySelector(".container_form_login").style.opacity = "0";
+        setTimeout(function () {
+          document.querySelector(".container_form_sign_up").style.opacity = "1";
+        }, time_to_show_sign_up);
+        setTimeout(function () {
+          document.querySelector(".container_form_login").style.display =
+            "none";
+        }, time_to_hidden_sign_up);
+      }
+      const time_to_hidden_all = 500;
+
+      function hidden_login_and_sign_up() {
+        document.querySelector(".container_forms").className =
+          "container_forms";
+        document.querySelector(".container_form_sign_up").style.opacity = "0";
+        document.querySelector(".container_form_login").style.opacity = "0";
+        setTimeout(function () {
+          document.querySelector(".container_form_sign_up").style.display =
+            "none";
+          document.querySelector(".container_form_login").style.display =
+            "none";
+        }, time_to_hidden_all);
+      }
+    </script>
+  </body>
+</html>
